@@ -79,11 +79,11 @@ Two- and three-dimensional histogramming from data coordinates, and weighted two
   n = hist2(data,[nx,ny,w,[xmin xmax ymin ymax]])
 
 Inputs
-  data (n x 2 vector of x,y values, n x 3 in hist3)
-  nx, ny (integers, number of bins in the x- and y-directions
-  [in whist2] w (n-vector, weights for each data point)
-  xmin, xmax, ymin, ymax (floats, limits on x and y)
-  [in hist3] nz (bins in z-direction)
+  data (n x 2 vector of x,y values, n x 3 in hist3),
+  nx, ny (integers, number of bins in the x- and y-directions,
+  [in whist2] w (n-vector, weights for each data point),
+  xmin, xmax, ymin, ymax (floats, limits on x and y),
+  [in hist3] nz (bins in z-direction),
   [in hist3] zmin, zmax (limits in z-direction)
 
 Output
@@ -95,8 +95,8 @@ smooth, smooth2, smooth3b
 1-, 2- and 3-D Gaussian smoothing using FFT.
 
 Input
-  input (vector of scalar values)
-  width (float, width of smoothing, in pixels)
+  input (vector of scalar values),
+  width (float, width of smoothing, in pixels),
   padding (integer, number of cells to pad with zeros)    
 
 Output
@@ -115,8 +115,8 @@ imageplot and imageplot_smooth
 imageplot snippet to return and plot a two-dimension histogram from (x,y) data and imageplot the result, scaling and inverting the colormap to give black counts on a white background. Uses hist2 from numericaltools.
 
 Input
-  x (vector)
-  y (vector)
+  x (vector),
+  y (vector),
   res (scalar or 2-vector)
 
 Output 
