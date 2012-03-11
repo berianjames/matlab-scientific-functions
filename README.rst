@@ -21,6 +21,7 @@ Index
 * PolynomialDivision
 * numericaltools
 * plottingtools
+* scientifictools
 
 PolynomialDivision
 ==================
@@ -139,3 +140,54 @@ Prepares a simple Matlab plot figure for exporting (with exportfig, say). This a
 
 Input
   handle (figure handle), xlab, ylab (strings for x- and y-labels, with $math$ to be parsed by LaTeX, fsize (integer font size)
+
+scientifictools
+===============
+
+These are more specialist functions that I have used in research relating to the statistics of gaussian random fields. 
+
+grfPk
+-----
+
+   A = grfPk(N,L,Pfn)
+
+Generates mean-zero three-dimensional Gaussian random field on an N^3 grid, of physical length scale L (per side), with power spectrum specified by the function handle Pfn. 
+
+This routine operates by creating a random field of the size of the output and Fourier transforming it to generate Hermitian symmetry pairs. With that done, the Fourier space field has its phases set to be $U[0,2\pi)$ and amplitudes set to be Rayleigh distributed with parameter $\sqrt(P(k)/2)$. This field has the Hermitian symmetry applied and is inverted back to configuration space, yielding a real-valued field with the desired power spectrum.
+
+If no power spectrum is supplied, a power law with index 0.96 is used, inspired by the primoridial cosmological power spectrum.
+
+Input
+   N (1- or 3-vector, box size in pixels)
+   L (1- or 3-vector, box size in physical units)
+   Pfn (function handle that returns P(k) for input k)
+
+Output
+   A (3-dimensional real-valued gaussian random array with power spectrum P(k))
+
+HermitePolyGen
+--------------
+
+Returns a vector representing coefficients of the Hermite polynomial of degree n. Extends the HermitePoly routine of David Terr to allow for both the probabilists' and physicists' defintions of the Hermite polynomials, as described in [W12]_.
+
+Input
+   n (integer, order of Hermite polynomial)
+   def (string, either 'prob' or 'phys')
+
+Output
+   hk ( (n+1)-vector of polynomial coefficients)
+
+HermiteFunction
+---------------
+
+Returns a vector of the values of Hermite function of order $n$ at locations $x$, using either the probabilists' and physicists' defintions of the Hermite polynomial, as discussed in [W12]_. See also section 7.1 of that article for the definition and applications of the Hermite functions.
+
+Input
+   n (integer, order of Hermite function)
+   x (abscissa at which the Hermite function values are returned
+   def (string, either 'prob' or 'phys')
+
+Output
+   y (vector of length len(x) of Hermite function values).
+
+.. [W12] See `http://en.wikipedia.org/wiki/Hermite_polynomials#Definition`
