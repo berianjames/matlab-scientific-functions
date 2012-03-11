@@ -30,7 +30,7 @@ Contains two functions for performing division on polynomials: one is for divisi
 PolynomialDivision
 ------------------
 
-[quot,rem] = PolynomialDivision(coeffs,div)
+`[quot,rem] = PolynomialDivision(coeffs,div)`
 
 Polynomials are represented as vectors of coefficients, going from x^n down to x^0. E.g., x^3 + 2x + 4 :: [1 0 2 4]
 
@@ -38,13 +38,13 @@ This routine calculates quotient and remainder such that coeffs / div = quot + r
 
 PolynomialDivisionMod
 ---------------------
-v
-[quot,rem] = PolynomialDivisionMod(coeffs,div,n)
+
+`[quot,rem] = PolynomialDivisionMod(coeffs,div,n)`
 
 Performs polynomial division with the integers mod n.
 
 
-.. [C11] Collins, Julia (2011), The L^2 signature of torus knots, `http://arxiv.org/abs/1001.1329<arXiv:1001.1329>`_
+.. [C11] Collins, Julia (2011), The L^2 signature of torus knots, http://arxiv.org/abs/1001.1329
 
 numericaltools
 ==============
