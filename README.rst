@@ -18,10 +18,21 @@ This repository holds a set of short functions that aid scientific programming a
 Index
 =====
 
-* PolynomialDivision
-* numericaltools
-* plottingtools
-* scientifictools
+* halokit - A cosmological halo modelling library 
+
+* PolynomialDivision - routines for polynomial division
+* numericaltools - general numerical support routines
+* plottingtools - plot tweaking routines
+* scientifictools - scientific routines
+
+halokit - halo modelling in cosmology
+=====================================
+
+A suite of functions for performing analysis of cosmological data measurements of galaxy clustering, using the formalism known as the halo model. Built to be self-contained, the library takes a cosmological parameter set, a redshift and halo masses as input and computes the power spectrum and correlation function of dark matter, the density profile of dark matter haloes and the combined clustering statistics associated with these bodies.
+
+Detailed documentation is provided in the docstrings to the functions. The best way to get started is to dive in with HaloDriver, which is a script interface calling routines in the library.
+
+This library was reimplemented in Python as PyHalo, but is provided for Matlab users who will find it of interest. PyHalo itself was extended substantially by Henrik Brink (brinkar).
 
 PolynomialDivision
 ==================
