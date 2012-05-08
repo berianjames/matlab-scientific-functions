@@ -2,7 +2,7 @@
 matlab-science-functions
 ************************
 
-:Date: March 10, 2012
+:Date: March 9, 2012
 :Version: 0.4
 :Authors: Berian James
 :Web site: https://github.com/berianjames/matlab-science-functions
